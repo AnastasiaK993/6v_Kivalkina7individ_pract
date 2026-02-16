@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.bignerdranch.android.a7individdibi.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_loginFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/mainFragment"
+        android:name="com.bignerdranch.android.a7individdibi.MainFragment"
+        android:label="fragment_main"
+        tools:layout="@layout/fragment_main">
+        <action
+            android:id="@+id/action_mainFragment_to_studentListFragment"
+            app:destination="@id/studentListFragment" />
+        <action
+            android:id="@+id/action_mainFragment_to_teacherListFragment"
+            app:destination="@id/teacherListFragment" />
+        <!-- ДОБАВЬТЕ ЭТО ДЕЙСТВИЕ -->
+        <action
+            android:id="@+id/action_mainFragment_to_addEditStudentFragment"
+            app:destination="@id/addEditStudentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/studentListFragment"
+        android:name="com.bignerdranch.android.a7individdibi.StudentListFragment"
+        android:label="fragment_student_list"
+        tools:layout="@layout/fragment_student_list">
+        <action
+            android:id="@+id/action_studentListFragment_to_addEditStudentFragment"
+            app:destination="@id/addEditStudentFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addEditStudentFragment"
+        android:name="com.bignerdranch.android.a7individdibi.AddEditStudentFragment"
+        android:label="fragment_add_edit_student"
+        tools:layout="@layout/fragment_add_edit_student" />
+
+    <fragment
+        android:id="@+id/teacherListFragment"
+        android:name="com.bignerdranch.android.a7individdibi.TeacherListFragment"
+        android:label="fragment_teacher_list"
+        tools:layout="@layout/fragment_teacher_list">
+        <action
+            android:id="@+id/action_teacherListFragment_to_addEditTeacherFragment"
+            app:destination="@id/addEditTeacherFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addEditTeacherFragment"
+        android:name="com.bignerdranch.android.a7individdibi.AddEditTeacherFragment"
+        android:label="fragment_add_edit_teacher"
+        tools:layout="@layout/fragment_add_edit_teacher" />
+</navigation>
